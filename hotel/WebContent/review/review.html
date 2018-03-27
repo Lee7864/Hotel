@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)file:///C:/Users/it/Desktop/review.html -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="moonshot 문샷">
+<meta property="og:url" content="http://www.moonshot-cosmetics.com">
+<meta property="og:image"
+	content="http://www.moonshot-cosmetics.com/design/codecosme/wib/img/common/preview_img.jpg">
+<meta property="og:description" content="moonshot 문샷">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="no">
+<meta name="apple-mobile-web-app-status-bar-style"
+	content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon-precomposed"
+	href="http://moonshot-cosmetics.com/m/images/icon.png">
+<title>리뷰 작성</title>
+<link type="text/css" rel="stylesheet" href="./review_files/common.css">
+<link type="text/css" rel="stylesheet"
+	href="./review_files/font-awesome.min.css">
+</head>
+<body>
+<style type="text/css">
+#reviewForm .score-thumb .score dd em { color: #939393; }
+#reviewForm .write .pr-star .star-list em { color: #939393; }
+#reviewForm .info span em { color:; }
+#reviewForm #authimgdiv { z-index: 999999; border: 1px solid #ccc; }
+#reviewForm .score-total .prt-star span em { color: #939393; }
+#reviewForm .multi-score .score1 .selected { color: #939393; }
+</style>
+<link type="text/css" rel="stylesheet" href="./review_files/power_review_write.css">
+<link type="text/css" rel="stylesheet" href="./review_files/header.1.css">
+<link  type="text/css" href="./review_files/css" rel="stylesheet">
+<script type="text/javascript">
+	function menu() {
+		document.getElementById("menus").style.display="block";
+	}
+	function star(a) {
+		document.getElementById("targeta").text = document.getElementById(a).text;
+		document.getElementById("menus").style.display="none";
+	}
+	function submit1(){
+		document.getElementById("toname").value=document.getElementById("name").value;
+		document.getElementById("totitle").value=document.getElementById("title").value;
+		document.getElementById("toboard").value=document.getElementById("board").value;
+		document.getElementById("tostar").value=document.getElementById("targeta").text.length;
+		document.prw_file_form.submit();
+	}
+</script>
+	<div id="wrap">
+		<div id="container">
+			<div id="reviewForm">
+				<div class="prd-wrap">
+					<div class="write" id="writePowerReview">
+						<div class="pr-box-write">
+							<div class="pr-star">
+								<div class="star-list" style="z-index: 10;">
+									<a id="targeta" href="javascript:menu()">★★★</a>
+									<span class="bull">▼</span>
+									<ul id="menus" style="display: none;">
+										<li><a id="a1" href="javascript:star('a1')">★★★★★</a><span>아주만족</span></li>
+										<li><a id="a2" href="javascript:star('a2')">★★★★</a><span>만족</span></li>
+										<li><a id="a3" href="javascript:star('a3')">★★★</a><span>보통</span></li>
+										<li><a id="a4" href="javascript:star('a4')">★★</a><span>미흡</span></li>
+										<li><a id="a5" href="javascript:star('a5')">★</a><span>불만족</span></li>
+									</ul>
+								</div>
+							</div>
+							<dl class="pr-member">
+								<dt>작성자</dt>
+								<dd>
+									<input type="text" id="name" value="">
+								</dd>
+								<dt>제목</dt>
+								<dd>
+									<input type="text" id="title" value="">
+								</dd>
+							</dl>
+							<div class="txtbox">
+								<textarea id="board" style="margin: 0px; width: 1161px; height: 99px;"></textarea>
+								<div class="pr-text-length">
+									<em class="pr-red"><span id="PR_CONTENT_LENGTH">9</span></em>자
+								</div>
+							</div>
+						</div>
+						<ul class="ctr">
+							<li class="pr-file-wrap">
+								<div id="files" class="files"></div>
+								<form name="prw_file_form" id="prw_file_form" action="reviewProc.jsp"
+									method="post" enctype="multipart/form-data">
+									<input type="hidden" id="toname" name="writer" value=""> 
+									<input type="hidden" id="totitle" name="title" value=""> 
+									<input type="hidden" id="toboard" name="content" value="">
+									<input type="hidden" id="tostar" name="star" value=""> 
+									<input type="file" id="fileupload" name="pic" style="float: left">
+								</form>
+							</li>
+						</ul>
+					</div>
+					<a href="javascript:submit1();"
+						class="btn-form">리뷰등록</a>
+				</div>
+				<!-- #reviewForm -->
+			</div>
+			<!-- #container -->
+		</div>
+		<!-- #wrap -->
+	</div>
+</body>
+</html>
